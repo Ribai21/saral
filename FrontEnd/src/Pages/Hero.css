@@ -1,5 +1,5 @@
 .slider {
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     background: url("https://img.freepik.com/free-photo/crop-plate-with-salad_23-2147753678.jpg?t=st=1745917993~exp=1745921593~hmac=6ebc035b85b8aba0ab3bb72ab7fed4d0c2ef9ea75fde9da08a848920ad55f5c4&w=1480");
     background-size: cover;
@@ -22,14 +22,17 @@
     flex-direction: column;
     gap: 10px; 
     text-transform: capitalize;
+    margin-top: 40px;
 }
 @media screen and (max-width:620px) {
     .slider{
+        background: url("https://images.pexels.com/photos/1639556/pexels-photo-1639556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
         background-position: left;
-        border-bottom-right-radius: 150px;
+        background-size: cover;
+        
+        
     }
     .left{
-        margin-top: 50px;
         font-size: 33px;
     }
 }
