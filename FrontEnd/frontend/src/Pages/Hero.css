@@ -1,0 +1,35 @@
+.slider {
+    height: 100vh;
+    width: 100%;
+    background: url("https://img.freepik.com/free-photo/crop-plate-with-salad_23-2147753678.jpg?t=st=1745917993~exp=1745921593~hmac=6ebc035b85b8aba0ab3bb72ab7fed4d0c2ef9ea75fde9da08a848920ad55f5c4&w=1480");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    background-attachment: fixed;
+    font-family: "Merriweather", serif;
+    margin-bottom: 40px;
+    border-bottom-right-radius: 250px;
+}
+
+.left {
+    color: white;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    text-transform: capitalize;
+}
+@media screen and (max-width:620px) {
+    .slider{
+        background-position: left;
+        border-bottom-right-radius: 150px;
+    }
+    .left{
+        margin-top: 50px;
+        font-size: 33px;
+    }
+}
