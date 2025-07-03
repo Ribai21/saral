@@ -15,8 +15,10 @@ import React from "react";
 import CustomBtn from "../Components/Custombtn";
 
 import MenuData from "../Components/Datas/MenuData"
+import { useNavigate } from "react-router-dom";
 const Menu = (props) => {
   const {
+    id,
     title,
     description,
     price,
@@ -25,8 +27,10 @@ const Menu = (props) => {
     image,
     onClick,
   } = props;
+  const navigate = useNavigate();
+  
 return (
-    <Container>
+    <section id="menu">
         <Box>
             <Typography
                 variant="h3"
@@ -78,17 +82,17 @@ return (
                             <CustomBtn
                                 variant="outlined"
                                 label="Order Now"
-                                onClick={onClick}
+                                onClick={()=> navigate(`/menu/${product.id}`)}
                                 endIcon={<PreviewIcon />}
                                 sx={{
                                     marginTop: "7px",
-                                    color: "teal",
-                                    borderColor: "teal",
+                                    color: "red",
+                                    borderColor: "red",
                                     width: "100%",
                                     '&:hover': {
                                         color: "white",
                                         outline: "none",
-                                        backgroundColor: "rgba(16, 187, 187, 0.84)",
+                                        backgroundColor: "rgba(187, 16, 16, 0.84)",
                                     }
                                 }}
                             />
@@ -97,7 +101,7 @@ return (
                 </Grid>
             ))}
         </Grid>
-    </Container>
+    </section>
 );
 };
 

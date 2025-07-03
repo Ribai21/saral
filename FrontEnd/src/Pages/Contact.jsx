@@ -3,25 +3,28 @@ import { Col, Container, Row } from "react-bootstrap";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { Box, Typography } from "@mui/material";
 const Contact = () => {
   return (
     <>
+      <section id="contact" className="m-1 mt-5">
       <Container>
-        <h1
+          
+         <Typography
+          variant="h3"
           className="text-center"
-          style={{ fontFamily: "Lavishly Yours", color: "red" }}
+          sx={{ fontFamily: "Lavishly Yours", color: "red",}}
         >
           Contact Us
-        </h1>
-        <div
-          className=""
-          style={{
-            border: "1.4px solid teal",
-            width: "100px",
-            margin: "auto",
-            marginBottom: "30px",
-          }}
-        ></div>
+        </Typography>
+        <Box
+        sx={{
+          border:1.4,
+          width:"100px",
+          borderColor:"teal"
+          ,margin:"auto"
+        }}
+        />
         <Row style={{ marginTop: "50px" }}>
           <Col className="p-10"
             md={6}
@@ -34,7 +37,7 @@ const Contact = () => {
           >
             <div style={{ display: "flex", gap: "10px" }}>
               <LocationOnIcon style={{ fontSize: "30px", color: "red" }} />
-              <span style={{ fontSize: "20px" }}>Tenkasi</span>
+              <span style={{ fontSize: "20px" }}>123 Flavor Street,Tenkasi</span>
             </div>
             <div style={{ display: "flex", gap: "10px" }}>
               <CallIcon style={{ fontSize: "30px", color: "red" }} />
@@ -42,7 +45,7 @@ const Contact = () => {
             </div>
             <div style={{ display: "flex", gap: "10px" }}>
               <EmailIcon style={{ fontSize: "30px", color: "red" }} />
-              <span style={{ fontSize: "20px" }}>saral@gamil.com</span>
+              <span style={{ fontSize: "20px" }}>contact@saral.com</span>
             </div>
           </Col>
           <Col md={6}>
@@ -59,11 +62,9 @@ const Contact = () => {
             </div>
           </Col>
         </Row>
-        <Row style={{ marginTop: "10px",color:"grey",display:"flex", justifyContent:"center" }}>
-             &copy; 2023 All rights reserved | This template is made with ❤️ by Ribai 
-        </Row>
-        
       </Container>
+        
+      </section>
     </>
   );
 };

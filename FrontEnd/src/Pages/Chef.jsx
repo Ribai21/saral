@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, YouTube } from "@mui/icons-material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 const Chef = () => {
@@ -57,21 +58,28 @@ const Chef = () => {
   return (
     <>
       <Container className="py-3">
-        <h1
+         <Typography
+          variant="h3"
           className="text-center"
-          style={{ fontFamily: "Lavishly Yours", color: "red" }}
+          sx={{ fontFamily: "Lavishly Yours", color: "red" }}
         >
           Our Chefs
-        </h1>
-        <div
-          style={{ border: "1.4px solid teal", width: "100px", margin: "auto",marginBottom: "30px" }}
-        ></div>
-        <Row className="g-4">
+        </Typography>
+        <Box
+        sx={{
+          border:1.4,
+          width:"100px",
+          borderColor:"teal"
+          ,margin:"auto"
+        }}
+        />
+        
+        <Row className="g-4 mt-4">
           {Chef.map((chef) => (
             <Col key={chef.id} md={4} className="d-flex">
               <Card className="chef-card flex-fill text-white position-relative cursor-pointer overflow-hidden border-0">
                 <Card.Img src={chef.image} alt={chef.name} className="h-100" />
-                <Card.ImgOverlay className="chef-overlay d-flex flex-column align-items-center justify-content-center text-center bg-dark bg-opacity-50">
+                <Card.ImgOverlay  className="chef-overlay d-flex flex-column align-items-center justify-content-center text-center">
                   <Card.Title className="mt-3 text-capitalize fw-bold">
                     {chef.name}
                   </Card.Title>

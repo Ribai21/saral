@@ -7,6 +7,8 @@ import Service from '../../Pages/Service'
 import Chef from '../../Pages/Chef'
 import Table from '../../Pages/Table'
 import Contact from '../../Pages/Contact'
+import Testimonials from '../Testimonials'
+import Footer from '../Footer'
 const Landing = () => {
   return (
     <>
@@ -17,7 +19,9 @@ const Landing = () => {
     <Service/>
     <Chef/>
     <Table/>
+    <Testimonials/>
     <Contact/>
+    <Footer/>
     </>
     
   )

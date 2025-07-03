@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Landing from './Components/Landing/Landing'
 import Login from './Pages/Login'
 import { FaArrowUp } from "react-icons/fa";
+import { Productdetails } from './Pages/Productdetails';
 
 const App = () => {
   const [visible, setVisible] = useState(false);
@@ -35,6 +36,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Landing/>} />
       <Route path="/login" element={<Login/>} />
+      <Route path="/menu/:id" element={<Productdetails/>}/>
       </Routes>
       
       

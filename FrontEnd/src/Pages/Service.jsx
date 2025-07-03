@@ -52,8 +52,9 @@ const ServiceCard = ({ service }) => {
 
 const Service = () => {
   return (
-    <Container className="py-3">
-      <Box marginBottom={"40px"}>
+    <section id="service" className="py-3 p-5">
+      <Container>
+        <Box marginBottom={"40px"}>
         <Typography
           variant="h3"
           className="text-center"
@@ -78,7 +79,8 @@ const Service = () => {
           </Col>
         ))}
       </Row>
-    </Container>
+      </Container>
+    </section>
   );
 };
 

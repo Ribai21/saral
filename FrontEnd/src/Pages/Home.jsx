@@ -1,21 +1,8 @@
 import React, { useState } from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  InputBase,
-  Box,
-} from "@mui/material";
-import {
-  Search as SearchIcon,
-  ShoppingCart as ShoppingCartIcon,
-  AccountCircle as AccountCircleIcon,
-} from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { CgMenuMotion } from "react-icons/cg";
 import { RiCloseLargeLine } from "react-icons/ri";
-
+import {Link} from "react-scroll"
 const Home = () => {
   const [visible, setVisible] = useState(false);
 
@@ -39,10 +26,10 @@ const Home = () => {
           Saral
         </h1>
         <ul className="d-flex text-light me-5 navmenu align-items-center mt-3 fw-semibold fs-5 gap-4 list-unstyled">
-          <li>Home</li>
-          <li>Menu</li>
-          <li>Service</li>
-          <li>Contact</li>
+          <Link to="/" smooth={true} duration={300}><li className="menuitem">Home</li></Link>
+           <Link to="menu" smooth={true} duration={300}><li className="menuitem">Menu</li></Link>
+           <Link to="service" smooth={true} duration={300}><li className="menuitem">Service</li></Link>
+           <Link to="contact" smooth={true} duration={300}><li className="menuitem">Contact</li></Link>
         </ul>
         <CgMenuMotion
           size={30}
@@ -73,10 +60,10 @@ const Home = () => {
           className="ms-auto d-flex fw-bold"
         />
         <ul className="list-unstyled gap-3 d-flex text-light flex-column fw-semibold justify-content-center align-items-center">
-          <li>Home</li>
-          <li>Menu</li>
-          <li>Service</li>
-          <li>Contact</li>
+           <Link onClick={()=> setVisible(false)} to="/" smooth={true} duration={300}><li className="menuitem">Home</li></Link>
+           <Link onClick={()=> setVisible(false)} to="menu" smooth={true} duration={300}><li className="menuitem">Menu</li></Link>
+           <Link onClick={()=> setVisible(false)} to="service" smooth={true} duration={300}><li className="menuitem">Service</li></Link>
+           <Link onClick={()=> setVisible(false)} to="contact" smooth={true} duration={300}><li className="menuitem">Contact</li></Link>
         </ul>
       </div>
     </>
