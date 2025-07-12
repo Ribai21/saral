@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaFacebook, FaInstagram, FaTwitter, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
   return (
     <footer className="bg-danger text-white mt-5 pt-5 pb-4">
       <Container>
@@ -33,18 +34,19 @@ const Footer = () => {
             <h5 className="fw-bold mb-3">Get Special Offers</h5>
             <Form>
               <Form.Group controlId="formEmail">
-                <Form.Control
-                  type="email"
-                  placeholder="Enter your email"
-                  className="mb-2"
-                    
-                />
+                <input type="email"
+                value={email}
+                placeholder="Enter your email"
+                className="form-control mb-3"
+                onChange={(e)=>setEmail(e.target.value)} />
               </Form.Group>
               <Button onClick={(e)=>{e.preventDefault()
-alert("Thank you for subscribing!")
+              setEmail("")
+              email? alert("Subscribed successfully!") : alert("Please enter a valid email address.")
               }} variant="light" type="submit" className="fw-bold">
                 Subscribe
               </Button>
+              
             </Form>
           </Col>
         </Row>

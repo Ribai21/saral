@@ -5,6 +5,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { Container, Row, Col, Button, Card, Alert } from "react-bootstrap";
 import Menu from "./Menu";
 import { use } from "react";
+import { Box, Typography } from "@mui/material";
 export const Productdetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -88,7 +89,23 @@ export const Productdetails = () => {
         </Row>
       </Card>
       {/* Related Products */}
-      <h3 className="mt-5 mb-4">Related Products</h3>
+      <Box marginBottom={"40px"}>
+        <Typography
+          variant="h3"
+          className="text-center mt-5"
+          sx={{ fontFamily: "Lavishly Yours", color: "red" }}
+        >
+          Explore More Products
+        </Typography>
+        <Box
+        sx={{
+          border:1.4,
+          width:"100px",
+          borderColor:"teal"
+          ,margin:"auto"
+        }}
+        />
+      </Box>
       <Row> 
         {MenuData
           .filter((item) => item.category === product.category && item.id !== product.id)

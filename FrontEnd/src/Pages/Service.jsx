@@ -35,13 +35,13 @@ const services = [
 
 const ServiceCard = ({ service }) => {
   return (
-    <Card className="text-white position-relative overflow-hidden border-0">
+    <Card className="text-white  position-relative overflow-hidden border-0">
       <Card.Img
         src={service.image}
         alt={service.title}
         className="opacity-75"
       />
-      <Card.ImgOverlay className="d-flex flex-column align-items-center justify-content-center text-center bg-dark bg-opacity-50">
+      <Card.ImgOverlay className="d-flex overflow-hidden  flex-column align-items-center bg-dark justify-content-center text-center bg-dark bg-opacity-50">
         <div className="bg-white p-3 rounded-circle">{service.icon}</div>
         <Card.Title className="mt-3 fw-bold">{service.title}</Card.Title>
         <Card.Text>{service.description}</Card.Text>
@@ -52,7 +52,7 @@ const ServiceCard = ({ service }) => {
 
 const Service = () => {
   return (
-    <section id="service" className="py-3 p-5">
+    <section id="service" className="p-0 p-lg-3">
       <Container>
         <Box marginBottom={"40px"}>
         <Typography
@@ -72,14 +72,17 @@ const Service = () => {
         />
       </Box>
       {/* cards */}
-      <Row className="g-4">
+      <Row className="g-4" >
         {services.map((service, index) => (
-          <Col key={index} md={4}>
-            <ServiceCard service={service} />
+          <Col key={index} xs={12} md={6} xl={4}>
+            <ServiceCard  service={service} />
           </Col>
         ))}
       </Row>
       </Container>
+        
+      
+
     </section>
   );
 };
